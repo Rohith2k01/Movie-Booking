@@ -1,0 +1,151 @@
+/* Main Section */
+.mainSection {
+    width: 100%;
+    height: 100%;
+    padding: 80px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 900px;
+
+    border-radius: 10px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  .container h2{
+    text-align: center;
+  }
+  
+  /* Form Styles */
+  .movieFormWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+  }
+  
+  .movieForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Form Group */
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .selectField,
+  .inputField {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .selectField:focus,
+  .inputField:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Showtime Section */
+  .showtimesWrapper {
+    margin-top: 20px;
+  }
+  
+  .showtimeRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .showtimeRow input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .addButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .addButton:hover {
+    background-color: #218838;
+  }
+  
+  /* Submit Button */
+  .submitButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .submitButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Messages */
+  .successMessage,
+  .errorMessage {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .successMessage {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .errorMessage {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .mainSection {
+      padding: 20px;
+      padding-top: 100px;
+    }
+  
+    .showtimeRow {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

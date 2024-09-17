@@ -1,0 +1,275 @@
+/* General Styles */
+.mainSection {
+    width: 100%;
+    height: 100%;
+    padding: 120px;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+    border-radius: 8px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    margin-left: -120px;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 40px 120px;
+}
+
+.title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 34px;
+    
+}
+
+.addButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: #218838;
+}
+
+.movieTable {
+    overflow-y: scroll;
+    width: 100%;
+    padding-top: 140px;
+}
+.movieTable::-webkit-scrollbar {    
+    display: none;
+}
+
+.movieCard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px; /* Gap between image and content */
+}
+
+.movieIndex {
+    font-weight: bold;
+}
+
+
+.movieImage {
+    width: 150px; /* Adjust size if needed */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.movieContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movieHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between title and details */
+    margin-bottom: 10px;
+}
+
+.movieTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.movieDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.movieDetail {
+    font-size: 14px;
+    color: #333;
+}
+
+.movieDescription {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.movieActions {
+    display: flex;
+    gap: 10px;
+    height: auto;
+    align-items: center;
+}
+
+.deleteButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.deleteButton:hover {
+    background-color: #c62828;
+}
+
+.editButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.editButton:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.emptyMessage {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 786px) {
+
+    /* General Styles */
+    .mainSection {
+        width: 100%;
+        padding: 20px;
+        padding-top: 60px;
+    }
+
+  
+
+
+    
+
+    .header {
+        display: flex;
+        width: 100%;
+        padding: 30px;
+        margin-left: -20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    .addButton {
+        
+        padding: 8px 16px;
+    }
+
+    .movieTable {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .movieCard {
+        padding: 10px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .movieIndex{
+        display: none;
+    }
+
+    .movieImage {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+
+    .movieContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+    
+.movieHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between title and details */
+    margin-bottom: 10px;
+ 
+}
+
+.movieTitle {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+}
+
+.movieDetails {
+    display: grid;
+  
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3px;
+    margin-bottom: 0px;
+}
+
+.movieDetail {
+    font-size: 10px;
+    color: #333;
+ 
+}
+
+
+    .movieActions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .deleteButton, .editButton {
+        width: 100%;
+        padding: 8px 10px;
+    }
+}

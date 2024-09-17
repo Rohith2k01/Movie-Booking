@@ -1,0 +1,125 @@
+.bookingConfirmation {
+  padding: 20px;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(60, 60, 60, 0.167);
+  border-radius: 8px;
+}
+
+.details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.details h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.details p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.confirmButton {
+  background-color: #f12f3f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.confirmButton:disabled {
+  background-color: #ffacb3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: not-allowed;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.confirmButton:hover {
+  background-color: #e02424;
+}
+
+.phoneInput {
+  width: calc(100% - 120px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.verifyButton {
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f12f3f;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.verifyButton:hover {
+  background-color: #e02424;
+}
+
+.otpSection {
+  margin-top: 15px;
+}
+
+.otpInput {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.errorMessage {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+  .bookingConfirmation {
+    padding-top: 100px;
+  }
+
+  .details {
+    padding: 15px;
+  }
+
+  .confirmButton {
+    padding: 8px 16px;
+  }
+}

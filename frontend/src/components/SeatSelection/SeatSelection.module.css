@@ -1,0 +1,213 @@
+.seatsWrapper {
+  text-align: left;
+  padding: 0px 0px;
+  width: 100%;
+  margin-top: 0px;
+  padding: 0;
+
+}
+
+.seatsHeadingDiv{
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border-bottom:1px solid black ;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: #525252;
+  letter-spacing: 2px;
+}
+
+.details {
+  padding: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  color: #464646;
+  width: 270px;
+}
+
+.details span{
+  
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+
+/* Screen at the top of the seating area with a bent effect */
+.screen {
+  width: 60%; /* Reduce width to create space on the sides */
+  text-align: center;
+  background-color: hsla(217, 82%, 56%, 0.235);
+  border-radius: 10px 10px 200px 200px; /* Rounded top corners for a bent effect */
+  box-shadow: 0px -10px 18px 5px rgba(24, 232, 255, 0.3);
+  padding: 0px 0; /* Adjust padding for height */
+  margin: 100px auto 20px auto; /* Center the screen and add spacing */
+  position: relative; /* Position relative for potential future use */
+  height: 8px; /* Set height for a more pronounced bend */
+}
+
+
+.screenLabel {
+  color: rgb(85, 0, 255);
+  font-size: 6px; /* Slightly larger font */
+  font-weight: 400;
+  letter-spacing: 1px;
+  position: absolute; /* Ensure label stays centered */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the label */
+}
+.seatsContainer {
+  display: grid;
+  grid-template-columns: repeat(20, 45px); /* 10 seats per row */
+  gap: 10px;
+
+  align-items: center;
+  padding-top: 50px;
+  justify-content: center; /* Align seats to the start */
+  overflow-x: scroll;
+}
+.seatsContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1.8px solid #5bc15f; /* Green outline for available seats */
+  border-radius: 5px; /* Rounded seat edges */
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.available {
+  background-color: white; /* Default color for available seats */
+  color: #4caf50; /* Green text for available seats */
+}
+
+.booked {
+  background-color: #f0f0f0; /* Light grey background for booked seats */
+  border-color: #999999; /* Grey border for booked seats */
+  color: #999999; /* Muted color for booked seats */
+  cursor: not-allowed;
+}
+
+.selected {
+  background-color: #4caf50; /* Green background for selected seats */
+  color: white; /* White text for selected seats */
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.paymentSection {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.totalPrice {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.payButton {
+  background-color: #f53b57;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.payButton:hover {
+  background-color: #ff6b81;
+}
+
+@media (max-width: 768px) {
+  .seatsWrapper {
+    padding: 0 0px; /* Add some padding for smaller screens */
+  }
+
+  .seatsHeadingDiv {
+    padding-bottom: 15px; /* Slightly reduce bottom padding */
+  }
+
+  .title {
+    font-size: 18px; /* Decrease font size for the title */
+    letter-spacing: 1px; /* Slightly reduce letter spacing */
+  }
+
+  .details {
+    font-size: 12px; /* Decrease font size */
+    width: 100%; /* Make sure it takes full width */
+    letter-spacing: 1px; /* Adjust letter spacing */
+  }
+
+  .details span {
+    font-size: 11px; /* Decrease font size of span */
+    letter-spacing: 0.8px;
+  }
+
+  .seatsContainer {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr); /* Reduce to 8 seats per row */
+    gap: 4px; /* Reduce the gap between seats */
+    justify-content: start; /* Align seats to the start */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    padding: 20px 0; /* Add some padding for better spacing */
+  }
+
+  .seat {
+    width: 30px; /* Reduce seat width */
+    height: 30px; /* Reduce seat height */
+    font-size: 10px; /* Adjust font size for seat numbers */
+  }
+
+  .paymentSection {
+    flex-direction: column; /* Stack total price and button vertically */
+    gap: 4px; /* Add a small gap between elements */
+  }
+
+  .totalPrice {
+    font-size: 16px; /* Reduce font size */
+    text-align: center; /* Center align text */
+  }
+
+  .payButton {
+    font-size: 14px; /* Reduce button font size */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+    width: 100%; /* Full width for button */
+    max-width: 300px; /* Limit button width */
+    margin: 0 auto; /* Center the button */
+  }
+
+  .screen {
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+}

@@ -1,0 +1,229 @@
+.mainSection {
+    width: 100%;
+    padding: 130px 120px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+
+}
+
+.fixedContainer {
+    flex-direction: column;
+    position: fixed;
+    background-color: #f9f9f9;
+    width: 100%;
+    margin-left: -120px;
+    padding: 20px;
+
+    padding-left: 120px;
+    padding-right: 120px;
+    overflow: hidden;
+    padding-bottom: 0px;
+}
+
+.theatreCardHeading {
+    font-size: 13px;
+}
+
+.cardContainer {
+    padding-top: 220px;
+    overflow: scroll;
+}
+.cardContainer::-webkit-scrollbar {
+   display: none;
+}
+
+.theatreCard {
+    font-size: 12px;
+    
+
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 34px;
+
+}
+
+.addButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.theatreTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.theatreTable th {
+    text-align: left;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    border-bottom: 2px solid #ddd;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.theatreCardHeading {
+    background-color: #9b9b9b;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.theatreCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardRow {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.index {
+    font-weight: bold;
+}
+
+.cardActions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.deleteButton,
+.editButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+    background-color: #0056b3;
+}
+
+.editButton {
+    background-color: #ffc107;
+}
+
+.editButton:hover {
+    background-color: #e0a800;
+}
+
+.emptyMessage {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+}
+
+
+@media(max-width:768px) {
+    .mainSection {
+        padding: 20px;
+        padding-top: 60px;
+    }
+
+    .fixedContainer {
+        flex-direction: column;
+        position: fixed;
+        background-color: #f9f9f9;
+        width: 100%;
+        margin-left: -20px;
+        padding: 20px;
+        overflow: hidden;
+        padding-bottom: 0px;
+    }
+
+    .theatreCardHeading {
+        font-size: 13px;
+    }
+
+    .cardContainer {
+        padding-top: 220px;
+        overflow: scroll;
+    }
+
+    .theatreCard {
+        font-size: 12px;
+    
+
+    }
+
+    .cardActions {
+
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .cardContainer {
+        padding-top: 100px;
+        overflow: scroll;
+    }
+    
+    .theatreCardHeading  {
+        font-size: 10px;
+        display: none;
+
+    }
+    .theatreCard {
+        font-size: 10px;
+    
+
+    }
+}

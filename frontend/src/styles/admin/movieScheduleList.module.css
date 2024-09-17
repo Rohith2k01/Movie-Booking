@@ -1,0 +1,186 @@
+
+/* Main Section */
+.mainSection {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding: 160px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0px 40px;
+  border-radius: 8px;
+}
+
+/* Theatre Cards */
+.theatreCard {
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.headingWithButton{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.headingWithButton h2{
+  font-size: 40px;
+}
+
+.addButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.theatreCard h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+/* Movie Cards */
+.movieCard {
+  background-color: #fafafa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.movieContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.movieHeader {
+  margin-bottom: 15px;
+}
+
+.movieTitle {
+  font-size: 20px;
+  color: #333;
+}
+
+.movieDetail {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Date and Time Cards */
+.dateCard {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.dateCard strong {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Showtimes */
+.showtime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.showtime span {
+  color: #333;
+}
+.deleteIcon {
+  cursor: pointer;
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  transition: opacity 0.3s ease;
+}
+
+.deleteIcon:hover {
+  opacity: 0.7;
+}
+/* Error and Empty States */
+.error {
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.emptyMessage {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .theatreCard h3 {
+    font-size: 20px;
+  }
+
+  .movieTitle {
+    font-size: 18px;
+  }
+
+  .movieDetail {
+    font-size: 14px;
+  }
+
+  .dateCard strong {
+    font-size: 16px;
+  }
+
+  .showtime {
+    font-size: 14px;
+  }
+
+  .deleteButton {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainSection {
+    padding: 20px 10px;
+  }
+
+  .theatreCard {
+    padding: 15px;
+  }
+
+  .movieCard {
+    padding: 15px;
+  }
+
+  .dateCard {
+    padding: 10px;
+  }
+
+  .showtime {
+    font-size: 12px;
+  }
+}
