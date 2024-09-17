@@ -1,5 +1,5 @@
 const { trusted } = require('mongoose');
-const { Movie, Theatre, movieSchedule } = require('../models/admin-models');
+const { Movie, Theatre, movieSchedule } = require('../models/admin');
 const generateSeats = (capacity) => {
   const seats = [];
   const rows = Math.ceil(capacity / 20); // Assuming 10 seats per row

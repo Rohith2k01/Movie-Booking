@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const { Movie, movieSchedule,Theatre } = require('../models/admin-models');
-const Booking = require('../models/booking-model')
+const { Movie, movieSchedule,Theatre } = require('../models/admin');
+const Booking = require('../models/booking')
 
 module.exports = {
   getAllMovies: async () => {

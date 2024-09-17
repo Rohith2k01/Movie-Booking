@@ -1,11 +1,11 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
-const adminApi = require("../../helpers/admin-api");
-const adminHelper = require('../../helpers/admin-helper')
+const adminApi = require("../../helpers/adminapi");
+const adminHelper = require('../../helpers/adminhelper')
 const router = express.Router();
 const axios = require('axios');
-const { movieSchedule, Movie } = require('../../models/admin-models')
+const { movieSchedule, Movie } = require('../../models/admin')
 
 
 

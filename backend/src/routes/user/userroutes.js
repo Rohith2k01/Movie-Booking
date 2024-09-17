@@ -1,7 +1,7 @@
 
-const { Movie, Theatre, movieSchedule } = require('../../models/admin-models')
+const { Movie, Theatre, movieSchedule } = require('../../models/admin')
 const express = require("express");
-const userHelper = require('../../helpers/user-helper')
+const userHelper = require('../../helpers/userhelper')
 const router = express.Router();
 const Razorpay = require("razorpay");
 const twilio = require('twilio');

@@ -2,11 +2,11 @@
 const express = require('express');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
-const User = require('../models/user-models'); // Adjust the path to your User model
-const { verifyToken } = require('../middlewares/auth-middleware');
-const sendEmail = require('../config/mailer');
-const sendSms = require('../config/sms-sender');
-const authValidation = require('../helpers/auth-helper');
+const User = require('../models/user'); // Adjust the path to your User model
+const { verifyToken } = require('../middleware/auth');
+const sendEmail = require('../config/Nodemailer');
+const sendSms = require('../config/sms');
+const authValidation = require('../helpers/authhelper');
 const router = express.Router();
 
 // Google authentication route
