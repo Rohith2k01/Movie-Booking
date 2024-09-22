@@ -80,7 +80,7 @@ const ScheduleList: React.FC = () => {
           .map((schedule) => {
             if (schedule._id === scheduleId) {
               const updatedMovies = schedule.movies.map((movieSchedule) => {
-                if (movieSchedule.movie._id === movieId) {
+                if (movieSchedule.movie?._id === movieId) {
                   const updatedShowDates = movieSchedule.showDates
                     .map((showDate) => ({
                       ...showDate,
@@ -110,7 +110,7 @@ const ScheduleList: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.headingWithButton}>
         <h2>Movie Schedules</h2>
-        <button className={styles.addButton} onClick={() =>  router.push('/admin/movie-schedule')}>Add Movie</button>
+        <button className={styles.addButton} onClick={() =>  router.push('/admin/movieschedule')}>Add Schedule</button>
         </div>
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
 
@@ -127,13 +127,17 @@ const ScheduleList: React.FC = () => {
                     <div className={styles.movieContent}>
                       <div className={styles.movieHeader}>
                         <h4 className={styles.movieTitle}>
-                          {schedule.movies.map(movieSchedule => movieSchedule.movie.title).join(', ')}
+                          {/* {schedule.movies.map(movieSchedule => movieSchedule.movie.title).join(', ')} */}
+                          {schedule.movies
+                          .filter(movieSchedule => movieSchedule.movie) // Filter out null movieSchedule.movie
+                          .map(movieSchedule => movieSchedule.movie.title)
+                          .join(', ') || 'No Movies Available'}
                         </h4>
                         
                       </div>
 
                       <div className={styles.movieDetails}>
-                        {schedule.movies.map((movieSchedule) => (
+                        {schedule.movies.filter(movieSchedule => movieSchedule.movie).map((movieSchedule) => (
                           <div key={movieSchedule.movie._id} className={styles.movieDetailsSection}>
                           
                             {Array.isArray(movieSchedule.showDates) && movieSchedule.showDates.length > 0 ? (

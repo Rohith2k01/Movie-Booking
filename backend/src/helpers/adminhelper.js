@@ -81,7 +81,7 @@ module.exports = {
       await newTheatre.save();
 
       const savedTheatre = await movie.save();
-      theatreId = savedTheatre._id.toString()
+      TheatreId = savedTheatre._id.toString()
       return (movieId);
 
 

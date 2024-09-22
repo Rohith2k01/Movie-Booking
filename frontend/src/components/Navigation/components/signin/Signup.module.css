@@ -1,25 +1,46 @@
+/* Overlay for the popup */
 .signUpPopupOverlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Light translucent overlay */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
+    backdrop-filter: blur(6px); /* Softer blur effect */
+    animation: fadeIn 0.4s ease; /* Smooth fade-in effect */
 }
 
+/* Popup container */
 .signUpPopup {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
+    background: linear-gradient(135deg, #fff, #f3f3f3); /* Subtle gradient */
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     position: relative;
+    color: #444; /* Softer dark text */
+    animation: slideIn 0.5s ease forwards;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Close button */
 .closePopup {
     position: absolute;
     top: 10px;
@@ -28,26 +49,61 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: #888; /* Soft gray for close button */
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+.closePopup:hover {
+    color: #ff6b81; /* Pinkish hover for close button */
+    transform: rotate(90deg); /* Rotate on hover */
+}
+
+/* Sign Up button styles */
 .signUpOption {
-    background-color: #f1f1f1;
+    background-color: #009688; /* Cool teal for buttons */
     border: none;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
+    margin: 15px 0;
     width: 100%;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 50px;
     font-size: 1rem;
+    color: #fff; /* White text */
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Gentle shadow */
 }
 
 .signUpOption i {
-    margin-right: 8px;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: #fff; /* Icon color matches text */
 }
 
 .signUpOption:hover {
-    background-color: #ddd;
+    background-color: #00796b; /* Darker teal on hover */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
 }
+
+.signUpOption:active {
+    background-color: #004d40; /* Even darker teal on click */
+    transform: translateY(3px); /* Slight button press effect */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 480px) {
+    .signUpPopup {
+        width: 90%; /* Adjust popup width on mobile */
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .signUpOption {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import BookingConfirmation from "../../../components/Booking/Booking";
-import styles from "../../../components/BookingConfirmation/BookingConfirmation.module.css";
+import styles from "../../../components/Booking/Booking.module.css";
 
 interface UserDetails {
   userId: string;

@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import OTPInput from "../../../components/Otp/Otp";
-import styles from "../../../components/OtpInput/OtpInput.module.css";
-import { getUser, isAuthenticated, User } from '../../../Auth/auth';
+import styles from "../../../components/Otp/Otp.module.css";
+import { getUser, isAuthenticated, User } from '../../../utils/auth';
 import { useRouter } from 'next/navigation'; // Import useRouter
 import PopUpVerification from '../../../components/Verification/Verification';
 
@@ -23,6 +23,15 @@ const EmailVerification: React.FC = () => {
    // State to manage both initial and success popups
    const [showInitialPopup, setShowInitialPopup] = useState<boolean>(true); 
    const [showSuccessPopup, setShowSuccessPopup] = useState<boolean>(false);
+
+   useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+   
+    if (token) {
+        localStorage.setItem('authToken', token);
+    }
+}, []);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -49,7 +58,7 @@ const EmailVerification: React.FC = () => {
     setError("");
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/auth/send-otp",
+        "http://localhost:5000/api/auth/send-otp",
         { field: "email", value: email },
         { withCredentials: true }
       );
@@ -76,7 +85,7 @@ const EmailVerification: React.FC = () => {
     setError("");
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/auth/verify-otp",
+        "http://localhost:5000/api/auth/verify-otp",
         { field: "email", value: email, otp },
         { headers: { Authorization: `Bearer ${token}` }, withCredentials: true }
       );

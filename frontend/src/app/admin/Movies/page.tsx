@@ -118,7 +118,7 @@ const AddMovies: React.FC = () => {
         });
         setSelectedImage(null);
         setTimeout(() => {
-          router.push("/admin/movies-list");
+          router.push("/admin/movieslist");
         }, 1000); // Adjust the timeout as needed
       }
       

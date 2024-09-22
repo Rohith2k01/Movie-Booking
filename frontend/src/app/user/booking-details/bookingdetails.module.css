@@ -1,0 +1,146 @@
+.bookingDetailsContainer {
+    width: 100%;
+    /* Set a max-width to prevent stretching on large screens */
+    margin: 0 auto; /* Center the container */
+    display: grid;
+
+    gap: 20px;
+    padding: 20px 60px;
+    padding-top: 140px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the title */
+  .mainHeader {
+    text-align:left;
+    font-size: 28px;
+    margin-bottom: 0px;
+    color:#e02828;
+   
+  } 
+  
+  .userInfo {
+     /* Make user info span across the grid */
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: #f9c5c532;
+    padding: 15px;
+    border-radius: 6px;
+    border-bottom:1px solid #2c2a2a ;
+    
+  }
+  
+  .userInfo h2 {
+    font-size: 22px;
+    margin: 0;
+    color: #e02828;
+  }
+  
+  .userInfo p {
+    margin: 0px 0;
+    font-size: 13px;
+    color: #000000;
+  }
+  
+  .bookingCard {
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0px;
+    padding-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #2c2a2a;
+    box-shadow: 0 1px 5px rgba(222, 50, 50, 0.184);
+  }
+  
+  .bookingInfo {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid for booking items */
+    gap: 20px;
+  }
+  
+  .bookingItem {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(222, 50, 50, 0.184);
+    gap: 30px;
+  }
+  
+  .bookingItem h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #e3432e; /* Change the color for a more modern look */
+  }
+  
+  .bookingItem p {
+    text-align: left;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    font-weight: 500;
+    color: #e3432e;
+    margin: 0px 0;
+  }
+  .bookingItem p span{
+    text-align: left;
+    font-size: 12px;
+    color: #494747;
+    margin: 0px 0;
+  }
+  
+  .movieTitle {
+    cursor: pointer;
+    color: #ff0000; /* Highlight movie title with blue */
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .movieTitle:hover {
+    color: #f25959; /* Change color on hover */
+  }
+  
+  .movieDetails {
+    padding-left: 15px; /* Indentation for the movie details */
+    margin-top: 10px;
+    background-color: #ffffff; /* Light background for distinction */
+    border-left: 3px solid #f29898;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .errorMessage {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+  }
+  
+  /* Add media queries for better responsiveness */
+  @media (max-width: 768px) {
+    .bookingDetailsContainer {
+      padding: 20px;
+      grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+  
+    .userInfo {
+      grid-column: span 1;
+    }
+  
+    .bookingInfo {
+      grid-template-columns: 1fr; /* Single column layout for booking items */
+    }
+  }
+  

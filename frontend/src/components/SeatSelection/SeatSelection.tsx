@@ -104,7 +104,7 @@ const Seats: React.FC<SeatsProps> = ({ movieId, theatreId, showDate, showTime })
     }).toString();
 
     // Redirect to the booking confirmation page with query parameters
-    router.push(`/user/booking-confirmation?${queryParams}`);
+    router.push(`/user/bookingconfirmation?${queryParams}`);
   };
 
   return (

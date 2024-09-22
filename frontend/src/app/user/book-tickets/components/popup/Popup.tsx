@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Popup.module.css';
-import SignUpPopup from '../../../../../components/Navbar/components/signin/SignUp'; // Import the SignUpPopup component
+import SignUpPopup from '../../../../../components/Navigation/components/signin/SignUp'; // Import the SignUpPopup component
 
 interface PopupProps {
   message: string;

@@ -46,7 +46,7 @@ const TheatreList: React.FC = () => {
            <div className={styles.fixedContainer}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Theatre List</h2>
-                    <button className={styles.addButton} onClick={() => router.push('/admin/add-theatre')}>Add Theatre</button>
+                    <button className={styles.addButton} onClick={() => router.push('/admin/Theatre')}>Add Theatre</button>
                     </div>
                     <div className={styles.theatreCardHeading}>
                                     <div className={styles.cardRow}>

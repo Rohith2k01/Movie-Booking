@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import styles from "./Movies.module.css"; // Import your CSS file
+import styles from "../../../components/Movies/Movies.module.css"; // Import your CSS file
+import styles2 from './movielist.module.css'
 import { useRouter } from 'next/navigation';
 
 interface Movie {
@@ -40,7 +41,6 @@ const MovieDisplay: React.FC = () => {
           .filter((value, index, self) => self.indexOf(value) === index); // Remove duplicates
         setAvailableLanguages(allLanguages);
       } catch (error) {
-        console.error("Failed to fetch movies.");
       }
     };
     fetchMovies();
@@ -82,13 +82,13 @@ const MovieDisplay: React.FC = () => {
   };
 
   return (
-    <div className={styles.mainSection}>
-      <h2>Releases</h2>
+    <div className={styles2.mainSection}>
+      <h2>Movies</h2>
       <div className={styles.container}>
         <div className={styles.filterMainDiv}>
          
             <div className={styles.filterSection}>
-              <h3></h3>
+              <h3>Filter by</h3>
               <div className={styles.filterRow}>
                 <div className={styles.filterItem}>
                   <label htmlFor="genreFilter">Genre:</label>

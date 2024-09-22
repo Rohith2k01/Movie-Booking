@@ -93,7 +93,7 @@ const AdminNavigation = () => {
                     
                     </li>
                     <li className={styles.mainNavigationsLi}>
-                        <Link className={styles.listNav} href="/admin/moviescheduledlist">Movie Schedule</Link>
+                        <Link className={styles.listNav} href="/admin/movieschedulelist">Movie Schedule</Link>
                     </li>
                 </ul>
             </header>

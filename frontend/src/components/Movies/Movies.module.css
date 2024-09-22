@@ -1,259 +1,226 @@
 /* Main Section */
 .mainSection {
-  padding: 20px;
-
+  padding: 40px;
+  background-color: #ececec;
+  color: #333;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Container for all content */
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 1450px;
+  max-width: 1200px;
   margin: 0 auto;
-
 }
 
 /* Heading for the movies section */
 .mainSection h2 {
   text-align: center;
-  font-size: 36px;
+  font-size: 42px;
   margin-bottom: 40px;
-  color: rgb(254, 105, 105);
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
+
+/* Filter Section */
 .filterMainDiv {
-  width: 30%;
-  margin: 0 auto;
-  padding-left: 60px;
+  width: 100%;
+  max-width: 280px;
+  padding: 20px;
 }
 
 .filterSection {
-  overflow: hidden;
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  background-color: #f9f9f9;
-  margin-top: 20px;
-  
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .filterSection h3 {
-  margin-bottom: 15px;
-  font-size: 16px;
-  color:  rgb(254, 105, 105);
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
 }
 
 .filterRow {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .filterItem {
   display: flex;
-
-  align-items: center;
-  width: 100%;
+  flex-direction: column;
 }
 
 .filterItem label {
-  width: 30%;
-  font-size: 14px;
-  color:  rgb(254, 105, 105);
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
 }
 
 .filterItem select {
-  width: 70%;
-  padding: 10px;
-  font-size: 13px;
-  border-radius: 5px;
-  margin-left: 10px;
-  color:  rgb(254, 105, 105);
-  border: 1px solid rgb(255, 255, 255);
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
 
+.filterItem select:focus {
+  border-color: #007bff;
   outline: none;
 }
 
 /* Movies card container */
 .moviesCardDiv {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.moviesCardDiv::-webkit-scrollbar {
-  display: none;
+  gap: 20px;
+  justify-content: center;
 }
 
 /* Individual movie card */
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
-  padding: 20px;
+  gap: 20px;
+  justify-content: center;
 }
 
 .scheduleCard {
-  width: 200px;
-
-  background: white;
-  border-radius: 10px;
+  width: 280px;
+  background-color: #fff;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
 }
 
 .scheduleCard:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Movie Image */
 .movieImage {
   width: 100%;
-  height: 260px;
+  height: 200px;
   object-fit: cover;
-
+  border-bottom: 4px solid #007bff;
 }
 
 /* Movie Details */
 .scheduleDetails {
-  padding: 13px;
+  padding: 15px;
 }
 
 .movieTitle {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-
 .movieInfo {
-  font-size: 11px;
-  color: #777;
+  font-size: 14px;
+  color: #666;
 }
 
 /* Empty message */
 .emptyMessage {
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   color: #999;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
+/* Media Queries for responsive design */
 @media (max-width: 768px) {
   .mainSection {
-    padding:  0px;
-    width: 100%;
+    padding: 20px;
   }
 
   .container {
     flex-direction: column;
-    padding: 0 5px;
   }
-  .mainSection h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 0px;
-    color: rgb(254, 105, 105);
-  }
+
   .filterMainDiv {
     width: 100%;
-    padding-left: 0;
+    max-width: none;
+    padding: 0;
     margin-bottom: 20px;
   }
 
   .filterSection {
-    padding: 13px;
-    margin-top: 15px;
-  }
-
-  .filterRow {
-    align-items: flex-start;
-    gap: 10px;
+    padding: 15px;
   }
 
   .filterItem {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .filterItem label {
-    width: 100%;
+    font-size: 14px;
     margin-bottom: 5px;
-    font-size: 12px;
   }
 
   .filterItem select {
     width: 100%;
     padding: 8px;
-    font-size: 10px;
-    margin-left: 0;
+    font-size: 12px;
   }
 
   .moviesCardDiv {
-    width: 100%;
+    flex-wrap: nowrap;
     overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    
+    gap: 15px;
   }
 
   .cardContainer {
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
-    padding: 0;
   }
 
   .scheduleCard {
-    width: 150px;
-    flex: none;
-    height: auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
   }
 
   .movieImage {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .scheduleDetails {
-    padding: 10px;
+    height: 150px;
   }
 
   .movieTitle {
-    font-size: 14px;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 18px;
   }
 
   .movieInfo {
-    font-size: 10px;
-    color: #777;
+    font-size: 12px;
   }
 
   .emptyMessage {
-    font-size: 16px;
-    margin-top: 15px;
+    font-size: 18px;
   }
 }
+
+
+

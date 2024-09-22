@@ -1,7 +1,7 @@
 // src/components/OTPInput.tsx
 
 import React from "react";
-import styles from "../../components/OtpInput/OtpInput.module.css";
+import styles from "../../components/Otp/Otp.module.css";
 
 interface OTPInputProps {
   length: number;

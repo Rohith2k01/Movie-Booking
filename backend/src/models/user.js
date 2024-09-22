@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   lastname: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   emailVerifiedAt: { type: Date, default: null },
-  phone: { type: String, required: false, unique: true ,default: null },
+  phone: { type: String, required: false, unique: false ,default: null },
   phoneVerifiedAt: { type: Date, default: null },
   photo: { type: String }, // Optional field to store profile picture URL
 });

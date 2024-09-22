@@ -2,11 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const adminRoutes = require('./routes/admin/adminroutes');
-const userRoutes= require('./routes/user/userroutes');
-const passport = require('passport');  
+
+const Routes = require('./routes/routes');
 const authRoutes = require('./routes/authroutes'); // Add auth routes
+const passport = require('passport');
 const jwt = require('jsonwebtoken');
+
+
 
 const session = require('express-session');
 const { db } = require('./config/db')
@@ -38,7 +40,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: { secure: false, httpOnly: true },
-  
+
 }));
 
 app.use(passport.initialize());
@@ -47,9 +49,8 @@ app.use(passport.session());
 // Routes
 
 
-app.use('/api/admin/', adminRoutes); // Add the new movie routes
-app.use('/api/', userRoutes); // Add the new movie routes
-app.use('/api/auth/', authRoutes);  
+app.use('/api/', Routes); // Add the new movie routes
+app.use('/api/auth/', authRoutes);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

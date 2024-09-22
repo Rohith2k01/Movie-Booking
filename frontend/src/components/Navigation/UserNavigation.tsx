@@ -163,7 +163,10 @@ const UserNavigation = () => {
                     <li className={`${styles.mainNavigationsLi}`}>
                         <Link className={styles.listNav} href="/">Home</Link>
                     </li>
-                    <li className={styles.mainNavigationsLi}>
+                    <li className={`${styles.mainNavigationsLi}`}>
+                        <Link className={styles.listNav} href="/user/movielist">Movie List</Link>
+                    </li>
+                    {/* <li className={styles.mainNavigationsLi}>
                             <a className={styles.categories}>Categories <i className="fas fa-caret-down"></i></a>
                             <div className={styles.categoriesItems}>
                                 <p><Link href="/category1">Category 1</Link></p>
@@ -172,7 +175,7 @@ const UserNavigation = () => {
                                 <p><Link href="/category4">Category 4</Link></p>
                                 <p><Link href="/category5">Category 5</Link></p>
                             </div>
-                        </li>
+                        </li> */}
                     {/* Add more items here if needed */}
                 </ul>
             </header>

@@ -47,7 +47,7 @@ const MovieList: React.FC = () => {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Movie List</h2>
-                    <button className={styles.addButton} onClick={() =>  router.push('/admin/add-movies')}>Add Movie</button>
+                    <button className={styles.addButton} onClick={() =>  router.push('/admin/Movies')}>Add Movie</button>
                 </div>
                 {errorMessage && <div className={styles.error}>{errorMessage}</div>}
                 {movies.length > 0 ? (

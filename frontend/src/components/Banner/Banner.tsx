@@ -11,23 +11,23 @@ const fetchCarouselData = async () => {
     {
       id: 1,
       src: "/1.jpeg",
-      title: "Intersteller",
+      title: "Interstellar",
       rating: 4.5,
-      description: "A group of astronauts embarks on a mission through a wormhole to find a new habitable planet for humanity's survival as Earth faces ecological collapse.",
+      description: "A group of astronauts embarks on a mission through a wormhole to find a new habitable planet for humanity.",
     },
     {
       id: 2,
       src: "/2.jpg",
       title: "Inception",
       rating: 4.7,
-      description: " A skilled thief enters the dreams of others to plant an idea in their subconscious, blurring the line between reality and illusion.",
+      description: "A skilled thief enters the dreams of others to plant an idea in their subconscious, blurring the line between reality and illusion",
     },
     {
       id: 3,
       src: "/3.jpeg",
       title: "Shutter Island",
       rating: 4.9,
-      description: " A U.S. Marshal investigates the disappearance of a patient from a secluded psychiatric hospital, uncovering dark secrets and questioning his own sanity.",
+      description: " A U.S Marshal investigates the disappearance of a patient from a secluded psychiatric hospital, uncovering dark secrets and questioning his own sanity.",
     },
   ];
 };
